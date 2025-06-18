@@ -16,3 +16,18 @@ datasources:
       schema:
         - name: "Incurred Date"
           type: time
+  
+  - name: MHC Claims Pseudo CSV
+    type: marcusolsson-csv-datasource
+    access: proxy
+    uid: csv-mhc-claims-pseudo
+    editable: true
+    jsonData:
+      url: http://csv-server:8080/mhc_with_tic_pseudo.csv
+      decimalSeparator: "."
+      delimiter: ","
+      skipLeadingRows: 0
+      header: true
+      schema:
+        - name: "Incurred Date"
+          type: time
